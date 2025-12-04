@@ -5,14 +5,14 @@ import { Outlet, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 //import "./home.css";
 import Footer from "./components/Footer";
-import Assistant from "./components/Assistant"
 
 const HomeLayout = () => {
     return (
-        <div className="home-layout-container">
+        <div className="min-h-screen flex flex-col">
             <NavBar />
-            <Outlet />
-            <Assistant/>
+            <main className="flex-1">
+                <Outlet />
+            </main>
             <Footer />
         </div>
     );
