@@ -11,6 +11,9 @@ import Testimonials from "../pages/home/components/Testimonials"
 
 import UnExist from "../pages/home/components/UnExist"
 
+import Login from "../pages/auth/Login"
+import Register from "../pages/auth/Register"
+
 //? App component
 /*import App from "../App" */
 
@@ -36,6 +39,8 @@ const Router = () => {
                 <Route path = "aboutUs" element = {<AboutUs/>}/>
                 */}
             </Route>
+            <Route path="/login" element={<Login />} />
+            <Route path="/Register" element={<Register />} />
         </Routes>
     )
 }

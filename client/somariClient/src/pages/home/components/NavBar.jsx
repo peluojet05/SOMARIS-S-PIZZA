@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom"
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon, ShoppingCartIcon, UserIcon } from '@heroicons/react/24/outline'
 
@@ -14,6 +15,8 @@ function classNames(...classes) {
 }
 /*Carrousel aqui*/
 const NavBar = () => {
+    const navigate = useNavigate();
+
     return (
         <Disclosure
             as="nav"
@@ -87,28 +90,12 @@ const NavBar = () => {
                                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
                             >
                                 <MenuItem>
-                                    <a
-                                        href="#"
-                                        className="block px-4 py-2 text-sm text-gray-300 data-focus:bg-white/5 data-focus:outline-hidden"
+                                    <button
+                                        onClick={() => navigate('/login')}
+                                        className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-white/5"
                                     >
-                                        Your profile
-                                    </a>
-                                </MenuItem>
-                                <MenuItem>
-                                    <a
-                                        href="#"
-                                        className="block px-4 py-2 text-sm text-gray-300 data-focus:bg-white/5 data-focus:outline-hidden"
-                                    >
-                                        Settings
-                                    </a>
-                                </MenuItem>
-                                <MenuItem>
-                                    <a
-                                        href="#"
-                                        className="block px-4 py-2 text-sm text-gray-300 data-focus:bg-white/5 data-focus:outline-hidden"
-                                    >
-                                        Sign out
-                                    </a>
+                                        Sign in
+                                    </button>
                                 </MenuItem>
                             </MenuItems>
                         </Menu>
