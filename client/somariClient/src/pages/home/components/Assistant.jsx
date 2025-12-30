@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Assistant.css";
+import pororo from "../../../imagenes/pororo.jpg"
 
 const Assistant = () => {
     const [input, setInput] = useState("");
@@ -70,7 +71,7 @@ const Assistant = () => {
     return (
         <>
             <button className="assistant-btn" onClick={() => setOpen(o => !o)}>
-                <img src="/assets/Asistente.png" alt="Chat" />
+                <img src= {pororo} />
             </button>
 
             {open && (

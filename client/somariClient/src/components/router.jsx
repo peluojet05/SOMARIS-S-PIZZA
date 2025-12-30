@@ -1,5 +1,5 @@
 import React from "react"
-import {Route, Routes} from "react-router-dom"
+import {Route, Routes, useOutletContext} from "react-router-dom"
 
 //? Home components
 import HomeLayout from "../pages/home/HomeLayout"
